@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <title>Game Starts</title>
+</head>
+<body>
+    <div class="scores"><span id="playerscore">0</span>-<span id="compscore">0</span></div>
+    <div class="main">
+    <div id="you-game"><p>You</p>
+        <div id="image-container"></div>
+        <div id="buttons">
+            <img id="rock" src="./assets/rock-logo.png" height="80px">
+            <img id="paper" src="./assets/paper-logo.png" height="80px">
+            <img id="scissors" src="./assets/scissors-logo.png" height="80px">
+        </div>
+    </div>
+    <div id="v/s">
+        <img src="./assets/vs.png" height="500px" >
+    </div>
+
+    <div id="comp-game"><p>comp</p>
+        <div id="random-image"></div>
+    </div>
+    </div>
+    <div class="gameover">
+        <div class="result">YOU WON</div>
+        <button id="play-again-button" onclick="run()">Play again</button>
+    </div>
+    
+    <script src="./app.js"></script>
+    <script src="./game.js"></script>
+    <script src="./score.js"></script>
+</body>
+</html>

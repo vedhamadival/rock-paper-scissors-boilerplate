@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-image: url("./assets/bg.png");
+    font-family: Poppins;
+}
+h1{
+    color: rgb(90, 37, 192);
+    font-weight:bolder;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+#game-image{
+    margin-left:250px;
+    margin-top: 50px;
+}
+#play-button , #play-text{
+    display: flex;
+    justify-content:flex-end;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    margin-right: 100px;
+}
+.scores{
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    letter-spacing: 5px;
+}
+
+.main{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#you-game , #comp-game{
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width:400px;
+    color: white;
+    border: 3px solid #ffc434;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#you-game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result{
+    font-size: xx-large ;
+    color: white;
+}
+
+#play-again-button{
+    width: 180px;
+    height: 60px;
+    background-image: none;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    background-color: #ffc434;
+    color: white;
+    font-size: x-large;
+}
+.gameover{
+    visibility:hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
