@@ -8,51 +8,67 @@ var computerscore=document.getElementById("compscore");
 const result = document.querySelector(".result");
 const final = document.getElementsByClassName("gameover");
 
-
+let gameOver = false;
 
 function run(){
     window.location.href="gamepage.html";
 }
 
-
-rockbtn.addEventListener('click', (e)=>{
-    
-value = Math.floor(Math.random()*3)
-    execute(value)
-    displayimage(e.target.id)
-    repeat(e.target.id,value)
-})
-
-paperbtn.addEventListener('click',(e)=>{
-    
-value = Math.floor(Math.random()*3)
-    execute(value)
-    displayimage(e.target.id)
-    repeat(e.target.id,value)
-})
-
-scissorsbtn.addEventListener('click',(e)=>{
-    value = Math.floor(Math.random()*3)
-    execute(value)
-    displayimage(e.target.id)
-    repeat(e.target.id,value)
-})
-
 // rockbtn.addEventListener('click', (e)=>{
+//     if(!gameOver)
+// value = Math.floor(Math.random()*3)
 //     execute(value)
-//     console.log(value)
+//     displayimage(e.target.id)
+//     repeat(e.target.id,value)
 // })
 
 // paperbtn.addEventListener('click',(e)=>{
+//     if(!gameOver)
+// value = Math.floor(Math.random()*3)
 //     execute(value)
-//     console.log(value)
+//     displayimage(e.target.id)
+//     repeat(e.target.id,value)
 // })
 
 // scissorsbtn.addEventListener('click',(e)=>{
+//     if(!gameOver)
+//     value = Math.floor(Math.random()*3)
 //     execute(value)
-//     console.log(value)
+//     displayimage(e.target.id)
+//     repeat(e.target.id,value)
 // })
 
+function handleClickRock(e) {
+    if (!gameOver) {
+        const value = Math.floor(Math.random() * 3);
+        execute(value);
+        displayimage(e.target.id);
+        repeat(e.target.id, value);
+    }
+}
+
+function handleClickPaper(e) {
+    if (!gameOver) {
+        const value = Math.floor(Math.random() * 3);
+        execute(value);
+        displayimage(e.target.id);
+        repeat(e.target.id, value);
+    }
+}
+
+function handleClickScissors(e) {
+    if (!gameOver) {
+        const value = Math.floor(Math.random() * 3);
+        execute(value);
+        displayimage(e.target.id);
+        repeat(e.target.id, value);
+    }
+}
+
+// Adding event listeners with named functions
+rockbtn.addEventListener('click', handleClickRock);
+paperbtn.addEventListener('click', handleClickPaper);
+scissorsbtn.addEventListener('click', handleClickScissors);
 
 
 function displayimage(ind){
@@ -66,8 +82,6 @@ function displayimage(ind){
         youimage.innerHTML=`<img src="./assets/scissors-hand.png" width="350px"></img>`
     }
 }
-
-
 
 function execute(value){
     if (value==0 ){
@@ -100,9 +114,8 @@ function repeat(ind,value){
 }
 
 
-
 function end(){
-    console.log(1)
+    gameOver=true;
     final[0].style.visibility="visible"
     if (score1>score2){
         result.textContent= "YOU WON" 
@@ -111,11 +124,10 @@ function end(){
     }else{
         result.textContent= "DRAW"
     }
+    rockbtn.disabled = true;
+    paperbtn.disabled = true;
+    scissorsbtn.disabled = true;
+    rockbtn.removeEventListener('click', handleClickRock);
+    paperbtn.removeEventListener('click', handleClickPaper);
+    scissorsbtn.removeEventListener('click', handleClickScissors);
 }
-
-
-
-
-
-
-

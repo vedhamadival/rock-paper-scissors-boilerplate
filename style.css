@@ -40,8 +40,7 @@ h1{
     justify-content:space-evenly;
 }
 
-#you-game , #comp-game{
-    display: flex;
+#you-game{
     justify-content: center;
     height: 400px;
     width:400px;
@@ -49,6 +48,17 @@ h1{
     border: 3px solid #ffc434;
     font-size: 30px;
     font-weight: bold;
+}
+
+#comp-game{
+        justify-content: center;
+        text-align:center;
+        height: 400px;
+        width:400px;
+        color: white;
+        border: 3px solid #ffc434;
+        font-size: 30px;
+        font-weight: bold;
 }
 
 #you-game{
@@ -80,4 +90,20 @@ h1{
     justify-content: center;
     align-items: center;
 }
+
+#random-image img {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#image-container img{
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
